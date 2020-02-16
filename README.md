@@ -1,18 +1,19 @@
 第1课 计算机历史
--------  
+------- 
 公元前2500年，出现算盘，10进制
 1613年出现“computer”一词，早起代表一个职业。在1800年之后逐步替代成机器。
 1694年，步进计算器，
 计算机先驱Charles Babbage
 1823年，提出差分机…
+
 第2课 布尔逻辑和逻辑门
 -------  
 and与：都为”真“，输出”真“；有”假“，输出”假“。
-inputA	inputB	output
-true	true	true
-true	false	false
-false	true	false
-false	false	false
+|inputA|inputB|output|
+|true	|true	|true|
+|true	|false|false|
+|false|true|false|
+|false|false|false|
 or或：都为”假“，输出“假”；有“真”，输出”真“
 inputA	inputB	output
 true	true	true
