@@ -11,6 +11,7 @@
 and与：都为”真“，输出”真“；有”假“，输出”假“。
 
 |inputA|inputB|output|
+| ------ | ------ | ------ |
 |true	|true	|true|
 |true	|false|false|
 |false|true|false|
