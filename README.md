@@ -18,22 +18,25 @@ and与：都为”真“，输出”真“；有”假“，输出”假“。
 |false|false|false|
 
 or或：都为”假“，输出“假”；有“真”，输出”真“
-inputA	inputB	output
-true	true	true
-false	true	true
-true	false	True
-false	false	false
+|inputA|inputB|output|
+| ------ | ------ | ------ |
+|true|	true|	true|
+|false|	true|	true|
+|true|	false|	True|
+|false|false|false|
+
 Xor 异或：
+|inputA|	inputB|	output|
+| ------ | ------ | ------ |
+|true|	true|	false|
+|false|	true|	true|
+|true|	false|	True|
+|false|	false	|false|
  
  
-inputA	inputB	output
-true	true	false
-false	true	true
-true	false	True
-false	false	false
- 
- 
-二进制
+第3课 二进制
+-------  
+
 1字节=8bit =2^8=256
 MB百万字节（million bytes）
 GB 十亿字节（giga is billion bytes）
@@ -45,38 +48,37 @@ TB （terabyte 8 trillion bytes）
 625.9=1001110001.1110011001100110011001100110011001100110011
 10001000=136 ；进位136-127=9小数点向前进9位（E）
 .00111000111100110011010为有效数字（M）。
- 
- 
- 
- 
- 
+
 IEEE 754 对有效数字M和指数E，还有一些特别规定。
 前面说过，1≤ M <2，也就是说，M 可以写成 1.xxxxxx 的形式，其中 xxxxxx 表示小数部分。IEEE754 规定，在计算机内部保存 M 时，默认这个数的第一位总是 1，因此可以被舍去，只保存后面的 xxxxxx 部分。比如保存 1.01 的时候，只保存 01，等到读取的时候，再把第一位的1加上去。这样做的目的，是节省 1 位有效数字。以32位浮点数为例，留给 M 只有 23 位，将第一位的1舍去以后，等于可以保存 24 位有效数字。
 E 的真实值必须再减去一个中间数，对于 8 位的 E，这个中间数是 127；
  
 ascII码，有8位，能储存255个字符。汉字日文有上千个字符所以用2字节，16位。
  
-算数逻辑单元ALU
+第4课 算数逻辑单元ALU
+-------  
+
 ALU 有两个单元，1个算数单元，1个逻辑单元。
 算数单元，负责计算机里的所有数字操作
 xor用作一位加法器
-inputA	inputB	output
-1	0	1
-0	1	1
-0	0	0
+|inputA|	inputB|	output|
+|-------|-------|-------|    
+|1	|0	|1|
+|0	|1|	1|
+|0|	0	|0|
+
 当1+1出现需要进位1bit不够，需要进位，此时需要添加AND门。
 半加器出现
- And门处理进位
- 
- 
+And门处理进位
 超过1+1的运算，如1+1+1，需要使用全加器
- 
  
 8位计算，继续进位会溢出，需要更多全加器。
 半加器进位与下一个全加器相加
  
  
-逻辑单元
+第5课 逻辑单元
+-------  
+
 操作码代表A和B执行什么操作。flag代表状态，A-B，flag为0代表AB相等。
 negative位true说明A<B.
  
