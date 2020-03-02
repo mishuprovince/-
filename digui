@@ -1,0 +1,46 @@
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
+
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.File;
+import java.io.IOException;
+
+public class Main {
+    private static  void dfs(NodeList n,int m){
+        for(int i=0;i<n.getLength();i++){
+            Node node=n.item(i);
+            Element nodeElement;
+            if(node.getNodeType()==Node.ELEMENT_NODE)
+                nodeElement= (Element) node;
+            else
+                continue;
+                for(int j=0;j<m;j++)
+                    System.out.print("。");
+                System.out.print(node.getNodeName()+" ");
+                String value=nodeElement.getFirstChild().getNodeValue();
+                if(value!=null)
+                    System.out.println(value);
+                NodeList childList=nodeElement.getChildNodes();
+                dfs(childList,m+1);
+        }
+    }
+
+    public static void main(String[] args) {
+        File f=new File("digui.xml");
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        try {
+            Document doc=factory.newDocumentBuilder().parse(f);
+            dfs(doc.getElementsByTagName("a"),1);
+        } catch (SAXException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ParserConfigurationException e) {
+            e.printStackTrace();
+        }
+    }
+}
