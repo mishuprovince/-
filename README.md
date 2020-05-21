@@ -26,6 +26,7 @@ or或：都为”假“，输出“假”；有“真”，输出”真“
 |false|false|false|
 
 Xor 异或：
+<img src="img/xor.png"/>
 |inputA|	inputB|	output|
 | ------ | ------ | ------ |
 |true|	true|	false|
