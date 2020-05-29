@@ -45,7 +45,7 @@ TB （terabyte 8 trillion bytes）
 1KB（kilobyte）=2^10=1024bit
  
 32位float储存
-![32bit](https://github.com/mishuprovince/-/blob/master/img/xor.png)
+![32bit](https://github.com/mishuprovince/-/blob/master/img/32bitstorage.png)
 第一位是符号，判断正负；后8位是指数，2^E 表示指数位；最后23位是有效数字。
 
 625.9=1001110001.1110011001100110011001100110011001100110011
@@ -68,7 +68,6 @@ ALU 有两个单元，1个算数单元，1个逻辑单元。
 
 算数单元，负责计算机里的所有数字操作
 xor用作一位加法器
-<img src="img/xor.png"/>
 |inputA|	inputB|	output|
 |-------|-------|-------|    
 |1	|0	|1|
