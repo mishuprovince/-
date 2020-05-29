@@ -26,7 +26,7 @@ or或：都为”假“，输出“假”；有“真”，输出”真“
 |false|false|false|
 
 Xor 异或：
-<img src="img/xor.png"/>
+<img src="/img/xor.png"/>
 |inputA|	inputB|	output|
 | ------ | ------ | ------ |
 |true|	true|	false|
@@ -45,7 +45,7 @@ TB （terabyte 8 trillion bytes）
 1KB（kilobyte）=2^10=1024bit
  
 32位float储存
-<img src:"image/32"/>
+<img src="/img/32bitstorage.png"/>
 第一位是符号，判断正负；后8位是指数，2^E 表示指数位；最后23位是有效数字。
 
 625.9=1001110001.1110011001100110011001100110011001100110011
